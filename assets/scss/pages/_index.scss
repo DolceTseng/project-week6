@@ -1,3 +1,234 @@
-.index-title {
-  font-size: 100px;
+.theme-card {
+    border-radius: 20px 0 20px 0;
+    overflow: hidden;
+    position: relative;
+
+    .white {
+        z-index: 1;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        opacity: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(33, 37, 41, 0.4);
+        transition: opacity .4s;
+    }
+
+    &:hover::after {
+        opacity: 1;
+    }
+}
+
+.newest-content {
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: block;
+        width: 217px;
+        height: 73px;
+        background: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2024-week6/bg-1.png?raw=true");
+        opacity: 0;
+
+        @media (min-width:992px) {
+            opacity: 1;
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: block;
+        width: 110px;
+        height: 98px;
+        overflow: hidden;
+        background: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2024-week6/bg-2-sm.png?raw=true");
+
+        @media (min-width:992px) {
+            background: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2024-week6/bg-2.png?raw=true");
+            bottom: 0;
+            width: 300px;
+            height: 187px;
+        }
+    }
+}
+
+.bi-check {
+    color: $gray-600;
+}
+
+.text-btn {
+    font-family: "Newsreader";
+    font-size: 20px;
+    font-weight: bold;
+    color: $accent-200;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    &:hover {
+        color: $accent-300;
+    }
+}
+
+
+.swiper-prev,
+.swiper-next {
+    display: inline-block;
+    padding: 0px 16px;
+    border: 1px solid $gray-600;
+    border-radius: 100px;
+
+    &:hover {
+        background-color: $neutral-400;
+    }
+}
+
+.bi-arrow-left,
+.bi-arrow-right {
+    color: $neutral-400;
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+
+
+
+.swiper-button-disabled {
+    color: #dee2e6;
+    border-color: #dee2e6 !important;
+}
+
+.swiper-button-disabled:hover {
+    cursor: default;
+    background-color: initial !important;
+}
+
+.breadcrumb {
+    display: flex;
+
+    & li+li::before {
+        content: " / ";
+        color: $neutral-300;
+    }
+}
+
+.swiper {
+    display: flex;
+}
+
+.form-bg {
+    background-color: #fff;
+}
+
+
+.decorative-line {
+    position: relative;
+    text-align: center;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        display: block;
+        height: 1px;
+        background-color: $neutral-200;
+        z-index: 0;
+
+    }
+
+    .text {
+        z-index: 1;
+    }
+}
+
+.btn-neutral-100 {
+    &:hover {
+        background-color: $neutral-200;
+        color: #52525B;
+    }
+}
+
+.line {
+    position: relative;
+}
+
+.line::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 33%;
+    display: block;
+    width: 80px;
+    height: 1px;
+    background-color: $neutral-400;
+
+    @media (min-width:992px) {
+        left: 80px;
+    }
+
+}
+
+.articles-card {
+    height: 100%;
+}
+
+.radius-3 {
+    border-radius: 12px;
+}
+
+.hots-list:hover {
+    border-radius: 4px;
+    background-color: $accent-100;
+}
+
+.content-pic {
+    gap: 4px;
+}
+
+.radius {
+    border-radius: 4px;
+}
+
+.radius-prev {
+    border-radius: 20px 0 0 20px;
+}
+
+.radius-next {
+    border-radius: 0 20px 20px 0;
+}
+
+.fs-lg-52 {
+    @media (min-width:992px) {
+        font-size: 52px;
+    }
+}
+
+.tag {
+    content: "";
+    position: absolute;
+    top: 8%;
+    left: 80px;
+    display: block;
+}
+
+.bg-line {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, rgba(33, 37, 41, 0.05), rgba(33, 37, 41, 1));
 }

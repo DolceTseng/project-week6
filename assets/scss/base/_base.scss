@@ -1,12 +1,14 @@
-body {
-    font-family: "Lato", "Roboto Mono", sans-serif;
-    line-height: 1.5;
-}
-
 a {
-    text-decoration: none;
     color: inherit;
     display: inline-block;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    margin-bottom: 0;
 }
 
 h1,
@@ -14,14 +16,45 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-    margin-bottom: 0;
+h6,
+label,
+.badge,
+.btn {
+    letter-spacing: .1em;
 }
 
 p {
-    margin-bottom: 0;
+    letter-spacing: .05em; //依文字大小調整字距
 }
 
-img {
-    max-width: 100%;
+
+// 暫放區 ↓
+
+// navbar
+.search-content {
+    position: relative;
+
+    .form-search {
+        border: 1px solid $gray-300;
+        padding: 12px 20px;
+    }
+
+    .icon {
+        position: absolute;
+        content: '';
+        top: 8px;
+        right: 20px;
+    }
+
+}
+
+.bi {
+    font-size: 24px;
+    color: $accent-300;
+}
+
+
+// 準備丟掉
+.text-box {
+    height: 1000px;
 }
